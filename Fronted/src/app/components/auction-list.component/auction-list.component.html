@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h2>Auctions</h2>
+
+  <button class="btn btn-primary mb-3" (click)="ngOnInit()">Load Auctions</button>
+
+  <div class="list-group">
+    <a *ngFor="let auction of auctions"
+       [routerLink]="['/auction', auction.id]"
+       class="list-group-item list-group-item-action">
+      {{ auction.title }} - ${{ auction.currentPrice }}
+      <span class="badge bg-secondary float-end">{{ auction.status }}</span>
+    </a>
+  </div>
+</div>

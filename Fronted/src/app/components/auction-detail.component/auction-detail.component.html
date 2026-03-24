@@ -1,0 +1,6 @@
+<h2>{{auction.title}}</h2>
+
+<p>Price: {{auction.currentPrice}}</p>
+
+<input [(ngModel)]="bidAmount" type="number">
+<button (click)="placeBid()">Place Bid</button>
